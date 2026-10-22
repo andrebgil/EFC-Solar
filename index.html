@@ -61,7 +61,7 @@ th{color:var(--mut);font-weight:600;background:var(--bg)}
 .side .btn.s{color:#C9D4E3;border-color:#243652;flex:1}
 .cont{flex:1;min-width:0}main{max-width:1400px;margin:0 auto;padding:20px 24px}
 .mtop,.ovl{display:none}
-.dg{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:14px}
+.dg{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:14px}
 .kc{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;min-width:0}
 .kc span{color:var(--mut);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
 .kc b{display:block;font-size:28px;font-weight:800;margin:2px 0}.kc small{color:var(--ok);font-size:12px}.kc svg{width:100%;height:34px;margin-top:6px;display:block}
@@ -83,9 +83,12 @@ th{color:var(--mut);font-weight:600;background:var(--bg)}
 const ROLES={ceo:'CEO',admin:'Administrador',comercial:'Comercial',logistica:'Logística',financas:'Finanças',tecnico:'Técnico'};
 const ST=['Planeada','Em Curso','Terminada','Pendente','Paralisada'];
 const PST=['Enviada','Em negociação','Adjudicada','Perdida'];
-const REQ={projects:['code','client'],materials:['code','item'],progress:['code','act'],hours:['code'],proposals:['client','name']};
+const PROVS=['Maputo Cidade','Maputo Província','Gaza','Inhambane','Sofala','Manica','Tete','Zambézia','Nampula','Cabo Delgado','Niassa'];
+const PCAT=['Obras','Equipamentos/Produtos','Marketing','Patrocínio'];
+const PFX={'Obras':'OBR','Equipamentos/Produtos':'EQP','Marketing':'MKT','Patrocínio':'PAT'};
+const REQ={projects:['client'],materials:['code','item'],progress:['code','act'],hours:['code'],proposals:['client','name','prov','city']};
 const MST=['Pendente','Parcial','Disponível','Encomendado','Recebido'];
-const COLS=['reqs','projects','hours','progress','materials','roles','members','rates','proposals','finance','log'];
+const COLS=['clients','reqs','projects','hours','progress','materials','roles','members','rates','proposals','finance','log'];
 const S={me:null,uid:null,admin:false,d:{},names:{},tab:null,db:null,user:null,f:{}};
 COLS.forEach(c=>S.d[c]=[]);
 const $=(t,a={},...k)=>{const e=document.createElement(t);for(const x in a){if(a[x]==null)continue;x=='class'?e.className=a[x]:x.startsWith('on')?e[x]=a[x]:e.setAttribute(x,a[x])}k.flat().forEach(c=>e.append(c instanceof Node?c:document.createTextNode(c??'')));return e};
@@ -100,25 +103,25 @@ const mine=p=>(p.techs||[]).includes(S.uid);
 const seeCost=()=>['admin','financas','ceo'].includes(role());
 
 const ENT={
-projects:{t:'Projectos',edit:['admin','comercial'],f:[['code','Código'],['client','Cliente'],['name','Projecto / Obra'],['loc','Local'],['prov','Província'],['kw','Potência PV (kW)','number'],['bat','Baterias (kWh)','number'],['type','Tipo de sistema','sel',['On-Grid','Híbrido','Off-Grid','ESS','Outro']],['resp','Responsável'],['start','Data início','date'],['due','Data prevista','date'],['state','Estado','sel',ST],['pct','% Execução','number'],['techs','Técnicos atribuídos','techs'],['obs','Observações','area']]},
+projects:{t:'Projectos',edit:['admin','comercial'],f:[['code','Código da obra (vazio = gerar a partir das siglas)'],['client','Cliente'],['name','Projecto / Obra'],['cat','Tipo de projecto','sel',PCAT],['prov','Província','sel',PROVS],['city','Cidade / Distrito'],['csig','Sigla do cliente (ex.: IGR, CM)'],['lsig','Sigla do local (ex.: BR, SL)'],['loc','Local / Morada'],['kw','Potência PV (kW)','number'],['bat','Baterias (kWh)','number'],['inv','Potência do inversor (kW)','number'],['type','Tipo de sistema','sel',['On-Grid','Híbrido','Off-Grid','ESS','Outro']],['resp','Responsável'],['start','Data início','date'],['due','Data prevista','date'],['state','Estado','sel',ST],['pct','% Execução','number'],['value','Valor de venda ao cliente (MT)','number'],['matcost','Custo de materiais com o fornecedor (MT)','number'],['techs','Técnicos atribuídos','techs'],['obs','Observações','area']]},
 materials:{t:'Materiais & Pendências',edit:['admin','logistica'],f:[['code','Projecto','proj'],['item','Item / Material'],['need','Qtd. necessária','number'],['have','Qtd. disponível','number'],['state','Estado','sel',MST],['resp','Responsável'],['date','Data necessária','date'],['sup','Fornecedor / Origem'],['obs','Observações','area']]},
 progress:{t:'Progresso',edit:['admin','tecnico'],f:[['date','Data','date'],['code','Projecto','proj'],['act','Actividade'],['pct','% Concluído','number'],['issue','Pendência / Problema','area'],['fix','Acção correctiva'],['due','Data prevista','date'],['photo','Foto (opcional)','photo']]},
 hours:{t:'Horas Técnicos',edit:['admin','tecnico'],f:[['date','Data','date'],['code','Projecto','proj'],['in','Hora entrada','time'],['out','Hora saída','time'],['brk','Pausa (min)','number'],['act','Actividade executada','area'],['obs','Observações']]},
-proposals:{t:'Propostas',edit:['admin','comercial'],f:[['date','Data','date'],['client','Cliente'],['name','Proposta / Obra'],['kw','Potência PV (kW)','number'],['bat','Baterias (kWh)','number'],['value','Valor (MT)','number'],['state','Estado','sel',PST],['resp','Responsável'],['obs','Observações','area']]},
-finance:{t:'Finanças da obra',edit:['admin','financas'],f:[['value','Valor do contrato (MT)','number'],['billed','Facturado (MT)','number'],['received','Recebido (MT)','number'],['mat','Custo de materiais (MT)','number']]}
+proposals:{t:'Propostas',edit:['admin','comercial'],f:[['date','Data','date'],['client','Cliente'],['name','Proposta / Obra'],['cat','Tipo','sel',['Obras','Equipamentos/Produtos']],['prov','Província *','sel',PROVS],['city','Cidade / Distrito *'],['csig','Sigla do cliente (ex.: IGR) — obrigatória para adjudicar'],['lsig','Sigla do local (ex.: BR) — sugerida a partir da cidade'],['kw','Potência PV (kW)','number'],['bat','Baterias (kWh)','number'],['inv','Potência do inversor (kW)','number'],['value','Valor (MT)','number'],['state','Estado','sel',PST],['resp','Responsável'],['obs','Observações','area']]},
+finance:{t:'Finanças da obra',edit:['admin','financas'],f:[['billed','Facturado ao cliente (MT)','number'],['received','Recebido do cliente (MT)','number']]}
 };
 const COL={
-projects:p=>[p.code,p.client,p.name,p.prov,p.kw,p.bat,p.type,p.state,(p.pct||0)+'%',p.due],
+projects:p=>[p.code,p.client,p.name,p.cat||'Obras',[p.city,p.prov].filter(Boolean).join(', '),p.kw,p.bat,p.inv,p.state,(p.pct||0)+'%',p.due,...(seeCost()?(isMkt(p)?['—','—']:(x=>[fmt(x.bil),fmt(x.lu)])(profitOf(p))):[])],
 materials:m=>[m.date,pName(m.code),m.item,m.need,m.have,Math.max(0,(+m.need||0)-(+m.have||0)),$('span',{class:'tag'},m.state),m.sup],
 progress:p=>[p.date,pName(p.code),p.act,(p.pct||0)+'%',p.issue,p.fix,p.due,p.photo?$('img',{src:p.photo,style:'height:34px;border-radius:4px;cursor:pointer',onclick:()=>photoView(p.photo)}):''],
-proposals:p=>[p.date,p.client,p.name,p.kw,p.bat,fmt(p.value||0)+' MT',$('span',{class:'tag'},p.state),p.resp],
+proposals:p=>[p.date,p.client,p.name,p.cat||'Obras',[p.city,p.prov].filter(Boolean).join(', '),p.kw,p.bat,p.inv,fmt(p.value||0)+' MT',$('span',{class:'tag'},p.state),p.resp],
 hours:h=>{const c=calc(h);const r=[h.date,nm(h.uid),pName(h.code),h.in+'–'+h.out,fmt(c.nor),fmt(c.ext),h.act,$('span',{class:'tag '+(h.ok?'ok':'')},h.ok?'Aprovado':'Por aprovar')];if(seeCost())r.splice(6,0,fmt(c.cost)+' MT');return r}
 };
 const HEAD={
-projects:['Código','Cliente','Obra','Província','kW','kWh','Sistema','Estado','Exec.','Prevista'],
+projects:['Código','Cliente','Obra','Tipo','Local','kW PV','kWh','Inversor kW','Estado','Exec.','Prevista'],
 materials:['Data','Projecto','Item','Necess.','Disp.','Em falta','Estado','Fornecedor'],
 progress:['Data','Projecto','Actividade','%','Pendência','Acção','Prevista','Foto'],
-proposals:['Data','Cliente','Proposta','kW','kWh','Valor','Estado','Responsável'],
+proposals:['Data','Cliente','Proposta','Tipo','Local','kW PV','kWh','Inversor kW','Valor','Estado','Responsável'],
 hours:['Data','Técnico','Projecto','Horário','Normais','Extra','Actividade','Estado']
 };
 
@@ -142,7 +145,7 @@ function modal(k,doc,pre){
   E.f.forEach(([key,lab,type,opts])=>{
     body.append($('label',{},lab));
     let el;
-    if(type=='sel')el=$('select',{},$('option',{value:''},'—'),opts.map(v=>$('option',{value:v},v)));
+    if(type=='sel')el=$('select',{},$('option',{value:''},'—'),opts.concat(o[key]&&!opts.includes(o[key])?[o[key]]:[]).map(v=>$('option',{value:v},v)));
     else if(type=='proj')el=$('select',{},$('option',{value:''},'—'),S.d.projects.filter(p=>role()!='tecnico'||mine(p)).map(p=>$('option',{value:p.code},p.code+' · '+p.client)));
     else if(type=='photo'){el=$('input',{type:'file',accept:'image/*'});inputs[key]=el;body.append(el);if(o[key])body.append($('div',{class:'mut'},'Já existe uma foto; escolher outra substitui-a.'));return}
     else if(type=='area')el=$('textarea',{rows:2});
@@ -155,6 +158,9 @@ function modal(k,doc,pre){
     if(type!='techs')el.value=o[key]??(key=='date'&&k!='materials'?new Date().toISOString().slice(0,10):'');
     inputs[key]=el;body.append(el);
   });
+  if(k=='proposals'||k=='projects'){const cl=inputs.client,cs=inputs.csig,ct=inputs.city,ls=inputs.lsig;
+    const fillC=()=>{const c=S.d.clients.find(x=>x.id==slug(cl.value));if(c&&!cs.value)cs.value=c.code};
+    cl.addEventListener('change',fillC);ct.addEventListener('change',()=>{if(!ls.value)ls.value=locSig(ct.value)});fillC()}
   const close=()=>ov.remove();
   const save=async()=>{
     E.f.forEach(([key,,type])=>{
@@ -163,11 +169,14 @@ function modal(k,doc,pre){
       else o[key]=type=='number'?+inputs[key].value||0:inputs[key].value;
     });
     if(k=='hours'){if(!o.in||!o.out)return alert('Indique hora de entrada e saída.');if(!doc){o.uid=S.uid;o.ok=false}}
-    if(k=='projects'&&!o.code)return alert('Indique o código da obra.');
+    if(k=='proposals'||k=='projects'){o.csig=sigOf(o.csig);o.lsig=sigOf(o.lsig)}
+    if(k=='projects'&&!o.code){if(!(o.csig&&o.lsig))return alert('Indique o código da obra ou as siglas do cliente e do local.');o.code=makeCode(o.csig,o.lsig)}
+    if(k=='proposals'&&o.state=='Adjudicada'&&!o.projId&&!(o.csig&&o.lsig))return alert('Para adjudicar, indique a sigla do cliente e a do local: o código da obra é criado a partir delas.');
+    const cf=(o.csig&&o.client)?S.d.clients.find(c=>c.code==o.csig&&c.id!=slug(o.client)):null;if(cf)return alert('A sigla '+o.csig+' já pertence ao cliente "'+cf.name+'". Cada cliente tem a sua sigla.');
     if((REQ[k]||[]).some(x=>!o[x]))return alert('Preencha os campos obrigatórios.');
     if(k=='hours'&&tmin(o.out)<=tmin(o.in))return alert('A hora de saída tem de ser depois da entrada.');
     try{const pf=inputs.photo&&inputs.photo.files[0];if(pf)o.photo=await shrink(pf);
-      const ref=doc?S.db.collection(k).doc(doc.id):S.db.collection(k).doc();const w=ref.set(o);if(navigator.onLine)await w;else w.catch(()=>{});log(doc?'editou':'criou',k,o);close()}
+      const ref=doc?S.db.collection(k).doc(doc.id):S.db.collection(k).doc();const w=ref.set(o);if(navigator.onLine)await w;else w.catch(()=>{});log(doc?'editou':'criou',k,o);if((k=='proposals'||k=='projects')&&o.csig&&o.client)S.db.collection('clients').doc(slug(o.client)).set({name:o.client,code:o.csig});if(k=='proposals'&&o.state=='Adjudicada'&&!o.projId&&navigator.onLine)await autoProject(o,ref.id);close()}
     catch(e){alert('Não foi possível guardar: '+(e.message||e.code))}
   };
   const ov=$('div',{class:'ov'},$('div',{class:'md'},$('h2',{},(doc?'Editar · ':'Novo · ')+E.t),body,
@@ -181,26 +190,39 @@ const txt=c=>c instanceof Node?c.textContent:String(c??'');
 const log=(act,k,o)=>S.db.collection('log').add({t:Date.now(),uid:S.uid,act,k,ref:(o&&(o.code||o.item||o.client||o.act||o.name))||''}).catch(()=>{});
 const shrink=f=>new Promise((res,rej)=>{const i=new Image,r=new FileReader;r.onload=()=>{i.onload=()=>{const k=Math.min(1,900/Math.max(i.width,i.height)),c=document.createElement('canvas');c.width=i.width*k;c.height=i.height*k;c.getContext('2d').drawImage(i,0,0,c.width,c.height);res(c.toDataURL('image/jpeg',.6))};i.onerror=rej;i.src=r.result};r.onerror=rej;r.readAsDataURL(f)});
 const photoView=src=>{const o=$('div',{class:'ov',onclick:()=>o.remove()},$('img',{src,style:'max-width:100%;max-height:90vh;margin:auto;border-radius:8px'}));document.body.append(o)};
-const nextCode=()=>'OBR-'+String(Math.max(0,...S.d.projects.map(p=>+String(p.code).replace(/\D/g,'')||0))+1).padStart(3,'0');
-async function toProject(r){const code=nextCode();await S.db.collection('projects').doc().set({code,client:r.client,name:r.name,kw:r.kw||0,bat:r.bat||0,state:'Planeada',pct:0,techs:[],resp:r.resp||''});await S.db.collection('proposals').doc(r.id).update({projId:code});log('criou obra a partir de proposta','projects',{code})}
+const slug=s=>norm(s).replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+const sigOf=s=>String(s||'').replace(/[^A-Za-z0-9]/g,'').toUpperCase();
+const locSig=c=>{const t=norm(c).replace(/[^a-z]/g,''),v=t.replace(/[aeiou]/g,'');return(v.length>=2?v:t).slice(0,2).toUpperCase()};
+const makeCode=(c,l)=>{const pre=sigOf(c)+'.'+sigOf(l)+'.',suf='.'+new Date().getFullYear();
+  const n=Math.max(0,...S.d.projects.map(p=>String(p.code)).filter(x=>x.startsWith(pre)&&x.endsWith(suf)).map(x=>+x.slice(pre.length,-suf.length)||0))+1;return pre+String(n).padStart(2,'0')+suf};
+async function autoProject(p,id){
+  if(!(p.csig&&p.lsig))return alert('Edite a proposta e preencha a sigla do cliente e a do local para criar o código da obra.');
+  const cat=p.cat||'Obras',code=makeCode(p.csig,p.lsig);
+  await S.db.collection('projects').doc().set({code,cat,csig:sigOf(p.csig),lsig:sigOf(p.lsig),client:p.client,name:p.name,prov:p.prov||'',city:p.city||'',kw:+p.kw||0,bat:+p.bat||0,inv:+p.inv||0,value:+p.value||0,matcost:0,state:'Planeada',pct:0,techs:[],resp:p.resp||'',start:new Date().toISOString().slice(0,10),obs:'Criado automaticamente da proposta adjudicada.'});
+  await S.db.collection('proposals').doc(id).update({projId:code});
+  log('adjudicada: criou projecto','projects',{code});
+}
+const toProject=r=>autoProject(r,r.id).catch(e=>alert('Não foi possível criar o projecto: '+(e.message||e.code)));
 const inp='padding:8px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink);font:inherit';
 function listView(k){
   const E=ENT[k],F=S.f[k]=S.f[k]||{},box=$('div'),holder=$('div'),tools=$('div',{style:'display:flex;gap:6px;flex-wrap:wrap;align-items:center'});
   const head=[...HEAD[k]];if(k=='hours'&&seeCost())head.splice(6,0,'Custo');
+  if(k=='projects'&&seeCost())head.push('Facturado','Lucro');
   let rows=[];
   const q=$('input',{placeholder:'Pesquisar…',value:F.q||'',style:inp});q.oninput=()=>{F.q=q.value;draw()};tools.append(q);
   if(k=='hours'){const mo=$('input',{type:'month',value:F.m||'',style:inp});mo.onchange=()=>{F.m=mo.value;draw()};tools.append(mo)}
+  if(k=='projects'){const tp=$('select',{style:inp},$('option',{value:''},'Todos os tipos'),PCAT.map(x=>$('option',{value:x},x)));tp.value=F.t||'';tp.onchange=()=>{F.t=tp.value;draw()};tools.append(tp)}
   tools.append($('button',{class:'btn s',onclick:()=>csv(head,rows.map(r=>COL[k](r).map(txt)),E.t)},'Exportar Excel'));
   if(k=='hours'&&seeCost())tools.append($('button',{class:'btn s',onclick:()=>{const m={};rows.forEach(h=>{const c=calc(h),x=m[h.uid]=m[h.uid]||{n:0,e:0,c:0};x.n+=c.nor;x.e+=c.ext;x.c+=c.cost});csv(['Técnico','Horas normais','Horas extra','Custo (MT)'],Object.entries(m).map(([u,x])=>[nm(u),fmt(x.n),fmt(x.e),fmt(x.c)]),'Resumo-horas-'+(F.m||'total'))}},'Resumo por técnico'));
   if(canEdit(k))tools.append($('button',{class:'btn',onclick:()=>modal(k)},'+ Novo registo'));
   box.append($('div',{class:'bar'},$('h2',{},E.t),tools),holder);
   function draw(){
-    rows=visible(k).slice().filter(r=>!(k=='hours'&&F.m)||String(r.date).startsWith(F.m));
+    rows=visible(k).slice().filter(r=>!(k=='hours'&&F.m)||String(r.date).startsWith(F.m)).filter(r=>!(k=='projects'&&F.t)||(r.cat||'Obras')==F.t);
     const s=(F.q||'').toLowerCase();if(s)rows=rows.filter(r=>COL[k](r).map(txt).join(' ').toLowerCase().includes(s));
     rows.sort((a,b)=>String(b.date||b.start||'').localeCompare(String(a.date||a.start||'')));
     holder.replaceChildren();
     if(k=='proposals'){const adj=rows.filter(p=>p.state=='Adjudicada').length,lost=rows.filter(p=>p.state=='Perdida').length;
-      holder.append($('div',{class:'kp'},[['Propostas',rows.length],['Valor total (MT)',fmt(rows.reduce((a,p)=>a+(+p.value||0),0))],['Adjudicadas',adj],['Taxa de adjudicação',adj+lost?Math.round(100*adj/(adj+lost))+'%':'—']].map(([l,v])=>$('div',{},$('span',{},l),$('b',{},v)))))}
+      holder.append($('div',{class:'kp'},[['Propostas',rows.length],['Valor adjudicado (MT)',fmt(rows.filter(p=>p.state=='Adjudicada').reduce((a,p)=>a+(+p.value||0),0))],['Adjudicadas',adj],['Em aberto (só previsão)',rows.filter(p=>p.state=='Enviada'||p.state=='Em negociação').length],['Taxa de adjudicação',adj+lost?Math.round(100*adj/(adj+lost))+'%':'—']].map(([l,v])=>$('div',{},$('span',{},l),$('b',{},v)))))}
     const tb=$('table',{},$('tr',{},head.map(h=>$('th',{},h)),$('th',{},'')));
     if(!rows.length)tb.append($('tr',{},$('td',{colspan:head.length+1},'Sem registos.')));
     rows.forEach(r=>{
@@ -234,14 +256,59 @@ function alertsView(){
   if(!L.length)tb.append($('tr',{},$('td',{colspan:2},'Sem alertas. Tudo em dia.')));
   return $('div',{},$('div',{class:'bar'},$('h2',{},'Atenção')),$('div',{class:'wrap'},tb));
 }
+const okReq=r=>r.status=='Aprovada'||r.status=='Paga';
+const isMkt=p=>p.cat=='Marketing'||p.cat=='Patrocínio';
+const labour=c=>S.d.hours.filter(h=>h.code==c).reduce((a,h)=>a+calc(h).cost,0);
+const reqSum=(c,f)=>S.d.reqs.filter(r=>r.proj==c&&okReq(r)&&(r.cur||'MT')=='MT'&&(!f||f(r))).reduce((a,r)=>a+(+r.amount||0),0);
+function profitOf(p){const f=S.d.finance.find(x=>x.id==p.code)||{},val=+p.value||+f.value||0,bil=+f.billed||0,rec=+f.received||0,mat=matCost(p),lab=labour(p.code),oth=reqSum(p.code,r=>r.cat!='Material');return{val,bil,rec,mat,lab,oth,lu:val-mat-lab-oth}}
+const matCost=p=>+p.matcost>0?+p.matcost:reqSum(p.code,r=>r.cat=='Material');
+const tbl=(H,rows,tot)=>{const t=$('table',{},$('tr',{},H.map(h=>$('th',{},h))));rows.forEach(r=>t.append($('tr',{},r.map(c=>$('td',{},c)))));if(tot)t.append($('tr',{},tot.map(c=>$('th',{},c))));return t};
 function fin(){
-  const tb=$('table',{},$('tr',{},['Obra','Contrato','Facturado','Recebido','Por receber','Materiais','Mão-de-obra','Margem',''].map(h=>$('th',{},h))));
-  const T=[0,0,0,0,0,0];
-  S.d.projects.forEach(p=>{const f=S.d.finance.find(x=>x.id==p.code)||{},lab=S.d.hours.filter(h=>h.code==p.code).reduce((a,h)=>a+calc(h).cost,0),v=[+f.value||0,+f.billed||0,+f.received||0,(+f.billed||0)-(+f.received||0),+f.mat||0,lab];
-    v.push(v[0]-v[4]-v[5]);v.forEach((x,i)=>{if(i<6)T[i]+=x});T[6]=(T[6]||0)+v[6];
-    tb.append($('tr',{},$('td',{},p.code+' · '+p.client),v.map(x=>$('td',{},fmt(x))),$('td',{},$('button',{class:'btn s',onclick:()=>modal('finance',{...f,id:p.code,code:p.code})},'Editar'))))});
-  tb.append($('tr',{},$('th',{},'Total'),T.map(x=>$('th',{},fmt(x))),$('th',{},'')));
-  return $('div',{},$('div',{class:'bar'},$('h2',{},'Finanças por obra (MT)'),$('button',{class:'btn s',onclick:()=>csv(['Obra','Contrato','Facturado','Recebido','Por receber','Materiais','Mão-de-obra','Margem'],[...tb.querySelectorAll('tr')].slice(1).map(r=>[...r.children].slice(0,8).map(c=>c.textContent)),'Financas-obras')},'Exportar Excel')),$('div',{class:'wrap'},tb),$('p',{class:'mut'},'Mão-de-obra = horas registadas × custo/hora (separador Equipa). Margem = contrato − materiais − mão-de-obra.'));
+  const H=['Obra','Venda ao cliente','Facturado','Recebido','Por receber','Materiais (fornecedor)','Mão-de-obra','Outras requisições','Lucro','Margem'],T=new Array(8).fill(0),rows=[];
+  S.d.projects.filter(p=>!isMkt(p)).forEach(p=>{const f=S.d.finance.find(x=>x.id==p.code)||{},{val,bil,rec,mat,lab,oth,lu}=profitOf(p),v=[val,bil,rec,bil-rec,mat,lab,oth,lu];v.forEach((x,i)=>T[i]+=x);
+    rows.push([p.code+' · '+p.client,...v.map(fmt),val?Math.round(100*lu/val)+'%':'—',$('button',{class:'btn s',onclick:()=>modal('finance',{...f,id:p.code,code:p.code})},'Facturado/Recebido')])});
+  const t=tbl([...H,''],rows,['Total',...T.map(fmt),T[0]?Math.round(100*T[7]/T[0])+'%':'—','']);
+  return $('div',{},$('div',{class:'bar'},$('h2',{},'Finanças e lucro por obra (MT)'),$('button',{class:'btn s',onclick:()=>csv(H,rows.map(r=>r.slice(0,10).map(txt)),'Financas-obras')},'Exportar Excel')),$('div',{class:'wrap'},t),
+    $('p',{class:'mut'},'Lucro = venda − materiais (valor combinado com o fornecedor; se estiver vazio, usa as requisições de material aprovadas) − mão-de-obra (horas × custo/hora) − outras requisições aprovadas ou pagas ligadas à obra. Só valores em MT. Marketing e Patrocínios têm relatório próprio em Relatórios.'));
+}
+const canForecast=()=>['admin','ceo','financas','comercial'].includes(role());
+function forecastView(){
+  const Q=S.d.proposals,box=$('div'),holder=$('div');let W={e:20,n:50};try{W={...W,...JSON.parse(localStorage.getItem('efc_w')||'{}')}}catch(e){}
+  const wi=(k,l)=>{const i=$('input',{type:'number',min:'0',max:'100',value:W[k],style:inp+';width:80px'});i.onchange=()=>{W[k]=Math.min(100,Math.max(0,+i.value||0));try{localStorage.setItem('efc_w',JSON.stringify(W))}catch(e){}draw()};return $('label',{class:'mut',style:'display:flex;gap:6px;align-items:center'},l,i,'%')};
+  box.append($('div',{class:'bar'},$('div',{},$('h2',{},'Previsões'),$('div',{class:'mut'},'Baseadas nas propostas Enviadas e Em negociação. Não entram nas vendas, nos projectos nem nos totais do dashboard: só contam quando a proposta é Adjudicada.')),$('div',{style:'display:flex;gap:12px;flex-wrap:wrap'},wi('e','Probabilidade das Enviadas'),wi('n','Probabilidade das Em negociação'))),holder);
+  function draw(){
+    const E=Q.filter(q=>q.state=='Enviada'),N=Q.filter(q=>q.state=='Em negociação'),won=Q.filter(q=>q.state=='Adjudicada').length,lost=Q.filter(q=>q.state=='Perdida').length,op=[...E,...N];
+    const sv=l=>l.reduce((a,q)=>a+(+q.value||0),0),sk=f=>op.reduce((a,q)=>a+(+q[f]||0),0),pw=sv(E)*W.e/100+sv(N)*W.n/100;
+    const card=(l,v,t)=>$('div',{class:'kc'},$('span',{},l),$('b',{style:'font-size:22px'},v),$('small',{style:'color:var(--mut)'},t||''));
+    const pm={};op.forEach(q=>{const n=q.prov||'—';pm[n]=(pm[n]||0)+(+q.value||0)});const pv=Object.entries(pm).sort((a,b)=>b[1]-a[1]),mx=Math.max(1,...pv.map(x=>x[1]));
+    const tb=$('table',{},$('tr',{},['Cliente','Proposta','Local','Estado','Valor (MT)','kW PV','kWh','Inversor kW','Data'].map(h=>$('th',{},h))));
+    op.slice().sort((a,b)=>(+b.value||0)-(+a.value||0)).forEach(q=>tb.append($('tr',{},$('td',{},q.client),$('td',{},q.name),$('td',{},[q.city,q.prov].filter(Boolean).join(', ')),$('td',{},$('span',{class:'tag'},q.state)),$('td',{},fmt(q.value||0)),$('td',{},q.kw||0),$('td',{},q.bat||0),$('td',{},q.inv||0),$('td',{},q.date||''))));
+    if(!op.length)tb.append($('tr',{},$('td',{colspan:9},'Sem propostas em aberto.')));
+    const g='repeat(auto-fit,minmax(170px,1fr))';
+    holder.replaceChildren($('div',{class:'dg',style:'grid-template-columns:'+g},card('Enviadas',E.length,fmt(sv(E))+' MT'),card('Em negociação',N.length,fmt(sv(N))+' MT'),card('Potencial em aberto (MT)',fmt(sv(op)),op.length+' propostas'),card('Previsão ponderada (MT)',fmt(pw),W.e+'% enviadas · '+W.n+'% negociação'),card('Taxa histórica de adjudicação',won+lost?Math.round(100*won/(won+lost))+'%':'—',won+' ganhas · '+lost+' perdidas')),
+      $('div',{class:'dg',style:'grid-template-columns:'+g},card('Potência PV prevista (kW)',fmt(sk('kw'))),card('Baterias previstas (kWh)',fmt(sk('bat'))),card('Inversores previstos (kW)',fmt(sk('inv')))),
+      $('div',{class:'dm',style:'grid-template-columns:1fr 2fr'},$('div',{class:'pn'},$('h3',{},'Valor em aberto por província'),bars(pv.map(([n,v])=>[n,v,100*v/mx]),v=>fmt(v)+' MT')),$('div',{class:'pn'},$('h3',{},'Propostas em aberto'),$('div',{class:'wrap',style:'border:0'},tb))));
+  }
+  draw();return box;
+}
+function reportsView(){
+  const P=S.d.projects.filter(p=>!isMkt(p)),Q=S.d.proposals,box=$('div',{},$('div',{class:'bar'},$('h2',{},'Relatórios')));
+  const provs=[...new Set([...P.map(p=>p.prov),...Q.map(p=>p.prov)].filter(Boolean))];
+  const rp=provs.map(n=>{const q=Q.filter(x=>x.prov==n),p=P.filter(x=>x.prov==n);return[n,q.length,q.filter(x=>x.state=='Adjudicada').length,p.length,p.reduce((a,x)=>a+(+x.kw||0),0)]}).sort((a,b)=>(b[1]+b[3])-(a[1]+a[3]));
+  const cm={};[...Q.map(x=>[x,'q']),...P.map(x=>[x,'p'])].forEach(([x,k])=>{const n=(x.city||'—')+' ('+(x.prov||'—')+')';cm[n]=cm[n]||[n,0,0];cm[n][k=='q'?1:2]++});
+  const rc=Object.values(cm).sort((a,b)=>(b[1]+b[2])-(a[1]+a[2])).slice(0,10),mx=Math.max(1,...rp.map(r=>r[1]+r[3]));
+  box.append($('div',{class:'dm',style:'grid-template-columns:1fr 1fr'},
+    $('div',{},$('div',{class:'pn'},$('h3',{},'Procura por província',$('span',{},'propostas + projectos')),bars(rp.slice(0,8).map(r=>[r[0],r[1]+r[3],100*(r[1]+r[3])/mx]),v=>v+' registos')),
+      $('div',{class:'pn'},$('h3',{},'Detalhe por província',$('button',{class:'btn s',onclick:()=>csv(['Província','Propostas','Adjudicadas','Projectos','kW PV'],rp,'Procura-provincias')},'Exportar Excel')),$('div',{class:'wrap',style:'border:0'},tbl(['Província','Propostas','Adjudicadas','Projectos','kW PV'],rp.map(r=>[r[0],r[1],r[2],r[3],fmt(r[4])]))))),
+    $('div',{},$('div',{class:'pn'},$('h3',{},'Cidades com mais procura',$('span',{},'top 10')),$('div',{class:'wrap',style:'border:0'},tbl(['Cidade (província)','Propostas','Projectos'],rc))))));
+  if(seeCost()){
+    const M=S.d.projects.filter(isMkt),T=[0,0,0,0],rows=M.map(p=>{const prev=+p.matcost||0,rq=reqSum(p.code),lab=labour(p.code),tot=rq+lab;[prev,rq,lab,tot].forEach((x,i)=>T[i]+=x);return[p.code+' · '+p.client+' — '+p.name,p.cat,[p.city,p.prov].filter(Boolean).join(', '),[p.start,p.due].filter(Boolean).join(' → '),fmt(prev),fmt(rq),fmt(lab),fmt(tot),p.state]});
+    const H=['Projecto','Tipo','Local','Período','Material previsto (fornecedor)','Requisições aprovadas/pagas','Mão-de-obra','Total gasto','Estado'];
+    box.append($('div',{class:'pn',style:'margin-top:12px'},$('h3',{},'Marketing e Patrocínios: quanto gastámos (MT)',$('button',{class:'btn s',onclick:()=>csv(H,rows,'Marketing-Patrocinios')},'Exportar Excel')),
+      $('div',{class:'wrap',style:'border:0'},tbl(H,rows.length?rows:[['Ainda não há projectos de Marketing ou Patrocínio.','','','','','','','','']],['Total','','','',...T.map(fmt),''])),
+      $('p',{class:'mut'},'Total gasto = requisições aprovadas ou pagas ligadas ao projecto (todas as categorias) + mão-de-obra (horas registadas × custo/hora). O material previsto é só para comparação. Só valores em MT.')));
+  }
+  return box;
 }
 function hist(){
   const tb=$('table',{},$('tr',{},['Quando','Quem','Acção','Referência'].map(h=>$('th',{},h))));
@@ -249,7 +316,7 @@ function hist(){
   return $('div',{},$('div',{class:'bar'},$('h2',{},'Histórico (últimas 200 alterações)')),$('div',{class:'wrap'},tb));
 }
 const HELP={admin:['Dashboard: resumo da carteira.','Equipa: atribua a função a cada pessoa que cria conta e defina o custo/hora dos técnicos.','Histórico: veja quem alterou o quê.','Cópia de segurança: botão no separador Equipa.'],
-comercial:['Propostas: registe cada proposta e o seu estado. Quando for Adjudicada, carregue em "Criar obra".','Projectos: actualize dados da obra e atribua os técnicos.','Concursos: veja os concursos detectados e carregue em "Criar proposta" para os acompanhar.'],
+comercial:['Propostas: registe cada proposta com província, cidade, potências e as siglas do cliente e do local (ex.: IGR e BR). Ao marcar como Adjudicada, o projecto é criado com o código SIGLA-CLIENTE.SIGLA-LOCAL.NÚMERO.ANO (ex.: IGR.BR.01.2026). Previsões: propostas Enviadas e Em negociação, fora dos totais.','Projectos: actualize dados da obra e atribua os técnicos.','Concursos: veja os concursos detectados e carregue em "Criar proposta" para os acompanhar.'],
 logistica:['Materiais: registe o que cada obra precisa, o que há em stock e o que falta.','O painel Atenção avisa dos materiais em falta com data próxima.'],
 financas:['Horas: aprove os registos dos técnicos e exporte o resumo mensal.','Finanças: preencha contrato, facturado, recebido e custo de materiais por obra.'],
 ceo:['Dashboard e todos os separadores estão disponíveis para consulta.','Requisições: aprove ou rejeite os pedidos de pagamento (não pode aprovar os seus próprios).'],
@@ -258,7 +325,7 @@ const helpView=()=>$('div',{},$('div',{class:'bar'},$('h2',{},'Ajuda')),$('div',
 const backup=()=>{const o={};['projects','proposals','materials','progress','hours','finance','roles','members'].forEach(c=>o[c]=S.d[c].map(({photo,...r})=>r));dl(new Blob([JSON.stringify(o,null,1)],{type:'application/json'}),'EFC-backup-'+new Date().toISOString().slice(0,10)+'.json')};
 
 const svgEl=h=>{const d=document.createElement('div');d.innerHTML=h;return d.firstChild};
-const IC={dash:'<rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/>',alerts:'<path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10 21h4"/>',proposals:'<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/>',projects:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',materials:'<path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/>',hours:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',progress:'<path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/>',fin:'<path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',log:'<path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/>',team:'<circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-3.5 3-6 7-6s7 2.5 7 6"/><circle cx="17.5" cy="9" r="2.5"/><path d="M18 14c2.5 0 4 1.7 4 4"/>',help:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 1-1 1.7M12 17h.01"/>',tenders:'<path d="M9 3h6v3H9z"/><path d="M7 5H6a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1"/><path d="M8 12h8M8 16h5"/>',news:'<path d="M4 5h13v14a1 1 0 0 0 1 1H6a2 2 0 0 1-2-2z"/><path d="M17 9h3v9a2 2 0 0 1-2 2M7 9h6M7 13h6M7 17h3"/>',reqs:'<path d="M5 3h14v18l-3-2-2 2-2-2-2 2-2-2-3 2z"/><path d="M9 8h6M9 12h6"/>',my:'<path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/>'};
+const IC={dash:'<rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/>',alerts:'<path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10 21h4"/>',proposals:'<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/>',projects:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',materials:'<path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/>',hours:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',progress:'<path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/>',fin:'<path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',log:'<path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/>',team:'<circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-3.5 3-6 7-6s7 2.5 7 6"/><circle cx="17.5" cy="9" r="2.5"/><path d="M18 14c2.5 0 4 1.7 4 4"/>',help:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 1-1 1.7M12 17h.01"/>',tenders:'<path d="M9 3h6v3H9z"/><path d="M7 5H6a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1"/><path d="M8 12h8M8 16h5"/>',news:'<path d="M4 5h13v14a1 1 0 0 0 1 1H6a2 2 0 0 1-2-2z"/><path d="M17 9h3v9a2 2 0 0 1-2 2M7 9h6M7 13h6M7 17h3"/>',forecast:'<path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/>',reports:'<path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/>',reqs:'<path d="M5 3h14v18l-3-2-2 2-2-2-2 2-2-2-3 2z"/><path d="M9 8h6M9 12h6"/>',my:'<path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/>'};
 const icon=k=>svgEl('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+(IC[k]||IC.help)+'</svg>');
 const setTheme=t=>{document.documentElement.dataset.theme=t;try{localStorage.setItem('th',t)}catch(e){}};
 const themeToggle=()=>setTheme(document.documentElement.dataset.theme=='dark'?'light':'dark');
@@ -429,10 +496,16 @@ function reqsView(){
   }
   draw();return box;
 }
+function mkBlock(MK){
+  const sm=f=>MK.reduce((a,p)=>a+(+p[f]||0),0),spent=MK.reduce((a,p)=>a+reqSum(p.code)+labour(p.code),0);
+  const cards=[['Projectos',MK.length],['Potência PV (kW)',fmt(sm('kw'))],['Baterias (kWh)',fmt(sm('bat'))],['Inversores (kW)',fmt(sm('inv'))]];
+  if(seeCost())cards.push(['Total gasto (MT)',fmt(spent)]);
+  return $('div',{style:'margin:2px 0 14px'},$('div',{class:'mut',style:'margin:0 0 6px;font-weight:600'},'Marketing e Patrocínios (contados à parte, fora dos totais acima)'),$('div',{class:'dg',style:'grid-template-columns:repeat(auto-fit,minmax(150px,1fr))'},cards.map(([l,v])=>$('div',{class:'kc'},$('span',{},l),$('b',{style:'font-size:22px'},v)))));
+}
 function dashCore(){
-  const P=S.d.projects,tod=new Date().toISOString().slice(0,7),M6=mkeys(6),M12=mkeys(12),one=()=>1,kw=p=>+p.kw||0,bt=p=>+p.bat||0,sum=f=>P.reduce((a,p)=>a+f(p),0);
+  const ALL=S.d.projects,P=ALL.filter(p=>!isMkt(p)),MK=ALL.filter(isMkt),tod=new Date().toISOString().slice(0,7),M6=mkeys(6),M12=mkeys(12),one=()=>1,kw=p=>+p.kw||0,bt=p=>+p.bat||0,iv=p=>+p.inv||0,sum=f=>P.reduce((a,p)=>a+f(p),0);
   const cum=(M,f,c)=>M.map(m=>P.filter(p=>(!c||c(p))&&String(p.start||tod+'-01').slice(0,7)<=m).reduce((a,p)=>a+f(p),0));
-  const K=[['Número de projectos',P.length,cum(M6,one),'#4F9CF9'],['Projectos em curso',P.filter(p=>p.state=='Em Curso').length,cum(M6,one,p=>p.state=='Em Curso'),'#E8A200'],['Projectos terminados',P.filter(p=>p.state=='Terminada').length,cum(M6,one,p=>p.state=='Terminada'),'#2EBD85'],['Potência PV (kW)',fmt(sum(kw)),cum(M6,kw),'#4F9CF9'],['Baterias (kWh)',fmt(sum(bt)),cum(M6,bt),'#9B8CFF']];
+  const K=[['Número de projectos',P.length,cum(M6,one),'#4F9CF9'],['Projectos em curso',P.filter(p=>p.state=='Em Curso').length,cum(M6,one,p=>p.state=='Em Curso'),'#E8A200'],['Projectos terminados',P.filter(p=>p.state=='Terminada').length,cum(M6,one,p=>p.state=='Terminada'),'#2EBD85'],['Potência PV (kW)',fmt(sum(kw)),cum(M6,kw),'#4F9CF9'],['Baterias (kWh)',fmt(sum(bt)),cum(M6,bt),'#9B8CFF'],['Inversores (kW)',fmt(sum(iv)),cum(M6,iv),'#F2994A']];
   const kc=K.map(([l,v,s,c])=>{const d=s[5]-s[4];return $('div',{class:'kc'},$('span',{},l),$('b',{},v),$('small',{},d>0?'↗ +'+fmt(d)+' este mês':'sem novos este mês'),spark(s,c))});
   const top=P.slice().sort((a,b)=>kw(b)-kw(a)).slice(0,5),mxk=Math.max(1,...top.map(kw));
   const st=ST.map(x=>[x,P.filter(p=>p.state==x).length]),mxs=Math.max(1,...st.map(x=>x[1]));
@@ -442,7 +515,7 @@ function dashCore(){
   if(!rec.length)rt.append($('tr',{},$('td',{colspan:5},'Ainda não há projectos. Crie o primeiro em Projectos.')));
   const A=[...S.d.progress.map(x=>({d:x.date,t:(x.act||'Progresso')+' · '+pName(x.code)})),...S.d.proposals.map(x=>({d:x.date,t:'Proposta '+String(x.state||'').toLowerCase()+' · '+x.client})),...S.d.hours.map(x=>({d:x.date,t:nm(x.uid)+' registou horas · '+pName(x.code)})),...S.d.materials.filter(m=>(+m.need||0)>(+m.have||0)).map(m=>({d:m.date,t:'Em falta: '+m.item+' · '+pName(m.code)}))].filter(a=>a.d).sort((a,b)=>String(b.d).localeCompare(String(a.d))).slice(0,7);
   return $('div',{},$('div',{class:'bar'},$('div',{},$('h2',{},'Dashboard'),$('div',{class:'mut'},'Bem-vindo, '+(S.me.name||'')+'. Resumo da carteira de projectos.'))),
-    $('div',{class:'dg'},kc),
+    $('div',{class:'dg'},kc),mkBlock(MK),
     $('div',{class:'dm'},
       $('div',{},
         $('div',{class:'pn'},$('h3',{},'Evolução da carteira',$('span',{},'acumulado por data de início')),$('div',{class:'lg'},$('span',{},$('b',{style:'background:#4F9CF9'}),'Potência PV (kW)'),$('span',{},$('b',{style:'background:#9B8CFF'}),'Baterias (kWh)')),lineChart(M12,[{v:cum(M12,kw),c:'#4F9CF9'},{v:cum(M12,bt),c:'#9B8CFF'}])),
@@ -503,10 +576,10 @@ function render(){
   }
   const nA=r=='tecnico'?0:alerts().length,nT=r=='tecnico'?0:((S.feed.concursos||{}).items||[]).filter(i=>i.rel&&isNew(i)).length,nR=reqBadge();
   const tabs=r=='tecnico'?[['my','As minhas obras'],['hours','Horas'],['progress','Progresso'],['materials','Materiais'],['reqs','Requisições',nR]]:
-    [['dash','Dashboard'],['alerts','Atenção',nA],['proposals','Propostas'],['tenders','Concursos',nT],['news','Notícias'],['projects','Projectos'],['materials','Materiais'],['hours','Horas'],['progress','Progresso'],['reqs','Requisições',nR],...(seeCost()?[['fin','Finanças']]:[]),...(S.admin?[['log','Histórico']]:[]),...(S.admin||r=='financas'?[['team','Equipa']]:[])];
+    [['dash','Dashboard'],['alerts','Atenção',nA],['proposals','Propostas'],...(canForecast()?[['forecast','Previsões']]:[]),['tenders','Concursos',nT],['news','Notícias'],['projects','Projectos'],['materials','Materiais'],['hours','Horas'],['progress','Progresso'],['reqs','Requisições',nR],['reports','Relatórios'],...(seeCost()?[['fin','Finanças']]:[]),...(S.admin?[['log','Histórico']]:[]),...(S.admin||r=='financas'?[['team','Equipa']]:[])];
   tabs.push(['help','Ajuda']);
   if(!tabs.find(t=>t[0]==S.tab))S.tab=tabs[0][0];
-  const V={reqs:reqsView,tenders:tendersView,news:newsView,dash:dashboard,my:myWork,team,alerts:alertsView,fin,log:hist,help:helpView};
+  const V={forecast:forecastView,reports:reportsView,reqs:reqsView,tenders:tendersView,news:newsView,dash:dashboard,my:myWork,team,alerts:alertsView,fin,log:hist,help:helpView};
   const v=V[S.tab]?V[S.tab]():listView(S.tab);
   const ini=(S.me.name||'?').split(' ').map(w=>w[0]).slice(0,2).join('').toUpperCase(),cur=(tabs.find(t=>t[0]==S.tab)||[])[1]||'';
   const side=$('aside',{class:'side'+(S.menu?' open':'')},
@@ -549,7 +622,7 @@ function resub(){
   q('projects',r=='tecnico'?x=>x.where('techs','array-contains',u):null);
   q('hours',r=='tecnico'?x=>x.where('uid','==',u):null);
   q('materials');q('progress');
-  if(r!='tecnico')q('proposals');
+  if(r!='tecnico'){q('proposals');q('clients')}
   if(['admin','financas','ceo'].includes(r)){q('rates');q('finance')}
   q('reqs',['admin','ceo','financas'].includes(r)?null:x=>x.where('uid','==',u));
   if(r=='admin')q('log',x=>x.orderBy('t','desc').limit(200));
