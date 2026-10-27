@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T11:31:09+00:00",
+ "updated": "2026-10-27T17:44:42+00:00",
  "sources": [
   {
    "name": "Concursos.co.mz",
@@ -153,9 +153,9 @@
   },
   {
    "name": "Enabel Moçambique",
-   "ok": false,
-   "n": 0,
-   "err": "IncompleteRead: IncompleteRead(49048 bytes read)"
+   "ok": true,
+   "n": 1,
+   "err": null
   },
   {
    "name": "Banco Mundial (API)",
@@ -166,7 +166,7 @@
   {
    "name": "Pesquisas Google (47 consultas)",
    "ok": true,
-   "n": 240,
+   "n": 228,
    "err": null
   }
  ]
