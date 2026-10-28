@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T05:36:27+00:00",
+ "updated": "2026-10-28T11:36:12+00:00",
  "sources": [
   {
    "name": "Concursos.co.mz",
@@ -22,7 +22,7 @@
   {
    "name": "Mozambique Tenders",
    "ok": true,
-   "n": 0,
+   "n": 1,
    "err": null
   },
   {
@@ -125,7 +125,7 @@
    "name": "FUNAE",
    "ok": false,
    "n": 0,
-   "err": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid f"
+   "err": "URLError: <urlopen error [Errno 111] Connection refused>"
   },
   {
    "name": "EDM",
@@ -136,7 +136,7 @@
   {
    "name": "UFSA",
    "ok": true,
-   "n": 7,
+   "n": 60,
    "err": null
   },
   {
@@ -160,13 +160,13 @@
   {
    "name": "Banco Mundial (API)",
    "ok": true,
-   "n": 1,
+   "n": 5,
    "err": null
   },
   {
    "name": "Pesquisas Google (47 consultas)",
    "ok": true,
-   "n": 196,
+   "n": 197,
    "err": null
   }
  ]
