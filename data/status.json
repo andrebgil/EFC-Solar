@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T17:40:36+00:00",
+ "updated": "2026-10-29T05:38:49+00:00",
  "sources": [
   {
    "name": "Concursos.co.mz",
@@ -22,7 +22,7 @@
   {
    "name": "Mozambique Tenders",
    "ok": true,
-   "n": 1,
+   "n": 0,
    "err": null
   },
   {
@@ -123,9 +123,9 @@
   },
   {
    "name": "FUNAE",
-   "ok": false,
+   "ok": true,
    "n": 0,
-   "err": "URLError: <urlopen error [Errno 111] Connection refused>"
+   "err": null
   },
   {
    "name": "EDM",
@@ -166,7 +166,7 @@
   {
    "name": "Pesquisas Google (47 consultas)",
    "ok": true,
-   "n": 234,
+   "n": 243,
    "err": null
   }
  ]
