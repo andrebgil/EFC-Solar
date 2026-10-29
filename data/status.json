@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T11:36:44+00:00",
+ "updated": "2026-10-29T17:41:53+00:00",
  "sources": [
   {
    "name": "Concursos.co.mz",
@@ -52,7 +52,7 @@
   {
    "name": "BidDetail",
    "ok": true,
-   "n": 1,
+   "n": 2,
    "err": null
   },
   {
@@ -123,9 +123,9 @@
   },
   {
    "name": "FUNAE",
-   "ok": false,
+   "ok": true,
    "n": 0,
-   "err": "TimeoutError: The read operation timed out"
+   "err": null
   },
   {
    "name": "EDM",
@@ -166,7 +166,7 @@
   {
    "name": "Pesquisas Google (47 consultas)",
    "ok": true,
-   "n": 228,
+   "n": 226,
    "err": null
   }
  ]
