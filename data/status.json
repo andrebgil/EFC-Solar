@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T11:32:08+00:00",
+ "updated": "2026-10-30T17:36:56+00:00",
  "sources": [
   {
    "name": "Concursos.co.mz",
@@ -52,7 +52,7 @@
   {
    "name": "BidDetail",
    "ok": true,
-   "n": 2,
+   "n": 1,
    "err": null
   },
   {
@@ -136,7 +136,7 @@
   {
    "name": "UFSA",
    "ok": true,
-   "n": 60,
+   "n": 7,
    "err": null
   },
   {
@@ -166,7 +166,7 @@
   {
    "name": "Pesquisas Google (47 consultas)",
    "ok": true,
-   "n": 181,
+   "n": 249,
    "err": null
   }
  ]
