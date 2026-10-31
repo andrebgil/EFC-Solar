@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T11:28:14+00:00",
+ "updated": "2026-10-31T17:27:38+00:00",
  "sources": [
   {
    "name": "Concursos.co.mz",
@@ -22,7 +22,7 @@
   {
    "name": "Mozambique Tenders",
    "ok": true,
-   "n": 1,
+   "n": 0,
    "err": null
   },
   {
@@ -136,7 +136,7 @@
   {
    "name": "UFSA",
    "ok": true,
-   "n": 7,
+   "n": 60,
    "err": null
   },
   {
@@ -166,7 +166,7 @@
   {
    "name": "Pesquisas Google (47 consultas)",
    "ok": true,
-   "n": 198,
+   "n": 218,
    "err": null
   }
  ]
