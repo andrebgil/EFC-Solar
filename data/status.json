@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T11:28:06+00:00",
+ "updated": "2026-11-01T17:27:51+00:00",
  "sources": [
   {
    "name": "Concursos.co.mz",
@@ -136,7 +136,7 @@
   {
    "name": "UFSA",
    "ok": true,
-   "n": 7,
+   "n": 60,
    "err": null
   },
   {
@@ -160,13 +160,13 @@
   {
    "name": "Banco Mundial (API)",
    "ok": true,
-   "n": 2,
+   "n": 4,
    "err": null
   },
   {
    "name": "Pesquisas Google (47 consultas)",
    "ok": true,
-   "n": 235,
+   "n": 194,
    "err": null
   }
  ]
