@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02T11:46:52+00:00",
+ "updated": "2026-11-02T17:51:43+00:00",
  "sources": [
   {
    "name": "Concursos.co.mz",
@@ -40,7 +40,7 @@
   {
    "name": "TendersInfo",
    "ok": true,
-   "n": 2,
+   "n": 1,
    "err": null
   },
   {
@@ -166,7 +166,7 @@
   {
    "name": "Pesquisas Google (47 consultas)",
    "ok": true,
-   "n": 220,
+   "n": 247,
    "err": null
   }
  ]
