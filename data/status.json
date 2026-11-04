@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T05:52:18+00:00",
+ "updated": "2026-11-04T11:51:49+00:00",
  "sources": [
   {
    "name": "Concursos.co.mz",
@@ -22,7 +22,7 @@
   {
    "name": "Mozambique Tenders",
    "ok": true,
-   "n": 0,
+   "n": 1,
    "err": null
   },
   {
@@ -136,7 +136,7 @@
   {
    "name": "UFSA",
    "ok": true,
-   "n": 7,
+   "n": 60,
    "err": null
   },
   {
@@ -160,13 +160,13 @@
   {
    "name": "Banco Mundial (API)",
    "ok": true,
-   "n": 3,
+   "n": 4,
    "err": null
   },
   {
    "name": "Pesquisas Google (47 consultas)",
    "ok": true,
-   "n": 248,
+   "n": 190,
    "err": null
   }
  ]
