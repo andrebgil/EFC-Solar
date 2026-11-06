@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T05:53:29+00:00",
+ "updated": "2026-11-06T11:46:28+00:00",
  "sources": [
   {
    "name": "Concursos.co.mz",
@@ -22,7 +22,7 @@
   {
    "name": "Mozambique Tenders",
    "ok": true,
-   "n": 1,
+   "n": 0,
    "err": null
   },
   {
@@ -160,13 +160,13 @@
   {
    "name": "Banco Mundial (API)",
    "ok": true,
-   "n": 0,
+   "n": 1,
    "err": null
   },
   {
    "name": "Pesquisas Google (47 consultas)",
    "ok": true,
-   "n": 196,
+   "n": 193,
    "err": null
   }
  ]
