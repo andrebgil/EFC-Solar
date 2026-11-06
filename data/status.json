@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T11:46:28+00:00",
+ "updated": "2026-11-06T17:43:31+00:00",
  "sources": [
   {
    "name": "Concursos.co.mz",
@@ -21,9 +21,9 @@
   },
   {
    "name": "Mozambique Tenders",
-   "ok": true,
+   "ok": false,
    "n": 0,
-   "err": null
+   "err": "URLError: <urlopen error _ssl.c:994: The handshake operation timed out>"
   },
   {
    "name": "MozBids",
@@ -52,7 +52,7 @@
   {
    "name": "BidDetail",
    "ok": true,
-   "n": 1,
+   "n": 2,
    "err": null
   },
   {
