@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T17:43:31+00:00",
+ "updated": "2026-11-07T05:43:02+00:00",
  "sources": [
   {
    "name": "Concursos.co.mz",
@@ -23,7 +23,7 @@
    "name": "Mozambique Tenders",
    "ok": false,
    "n": 0,
-   "err": "URLError: <urlopen error _ssl.c:994: The handshake operation timed out>"
+   "err": "URLError: <urlopen error [Errno 111] Connection refused>"
   },
   {
    "name": "MozBids",
@@ -40,7 +40,7 @@
   {
    "name": "TendersInfo",
    "ok": true,
-   "n": 1,
+   "n": 2,
    "err": null
   },
   {
@@ -135,9 +135,9 @@
   },
   {
    "name": "UFSA",
-   "ok": true,
-   "n": 60,
-   "err": null
+   "ok": false,
+   "n": 0,
+   "err": "URLError: <urlopen error [Errno -3] Temporary failure in name resolution>"
   },
   {
    "name": "CEDSIF",
@@ -166,7 +166,7 @@
   {
    "name": "Pesquisas Google (47 consultas)",
    "ok": true,
-   "n": 193,
+   "n": 199,
    "err": null
   }
  ]
