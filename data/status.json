@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T17:29:10+00:00",
+ "updated": "2026-11-08T05:43:25+00:00",
  "sources": [
   {
    "name": "Concursos.co.mz",
@@ -15,9 +15,9 @@
   },
   {
    "name": "ts.gov.mz",
-   "ok": true,
+   "ok": false,
    "n": 0,
-   "err": null
+   "err": "URLError: <urlopen error timed out>"
   },
   {
    "name": "Mozambique Tenders",
@@ -166,7 +166,7 @@
   {
    "name": "Pesquisas Google (47 consultas)",
    "ok": true,
-   "n": 200,
+   "n": 186,
    "err": null
   }
  ]
