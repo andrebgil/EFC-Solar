@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T05:43:25+00:00",
+ "updated": "2026-11-08T11:31:24+00:00",
  "sources": [
   {
    "name": "Concursos.co.mz",
@@ -15,9 +15,9 @@
   },
   {
    "name": "ts.gov.mz",
-   "ok": false,
+   "ok": true,
    "n": 0,
-   "err": "URLError: <urlopen error timed out>"
+   "err": null
   },
   {
    "name": "Mozambique Tenders",
@@ -160,7 +160,7 @@
   {
    "name": "Banco Mundial (API)",
    "ok": true,
-   "n": 1,
+   "n": 5,
    "err": null
   },
   {
