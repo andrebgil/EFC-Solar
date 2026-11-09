@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T05:57:37+00:00",
+ "updated": "2026-11-09T11:50:32+00:00",
  "sources": [
   {
    "name": "Concursos.co.mz",
@@ -135,9 +135,9 @@
   },
   {
    "name": "UFSA",
-   "ok": false,
-   "n": 0,
-   "err": "URLError: <urlopen error [Errno -3] Temporary failure in name resolution>"
+   "ok": true,
+   "n": 60,
+   "err": null
   },
   {
    "name": "CEDSIF",
