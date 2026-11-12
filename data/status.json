@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T05:55:26+00:00",
+ "updated": "2026-11-12T11:52:46+00:00",
  "sources": [
   {
    "name": "Concursos.co.mz",
@@ -39,9 +39,9 @@
   },
   {
    "name": "TendersInfo",
-   "ok": false,
-   "n": 0,
-   "err": "TimeoutError: The read operation timed out"
+   "ok": true,
+   "n": 1,
+   "err": null
   },
   {
    "name": "OnlineTenders",
@@ -166,7 +166,7 @@
   {
    "name": "Pesquisas Google (47 consultas)",
    "ok": true,
-   "n": 192,
+   "n": 193,
    "err": null
   }
  ]
