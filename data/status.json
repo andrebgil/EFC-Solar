@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T17:48:07+00:00",
+ "updated": "2026-11-13T05:54:34+00:00",
  "sources": [
   {
    "name": "Concursos.co.mz",
@@ -15,9 +15,9 @@
   },
   {
    "name": "ts.gov.mz",
-   "ok": true,
+   "ok": false,
    "n": 0,
-   "err": null
+   "err": "URLError: <urlopen error timed out>"
   },
   {
    "name": "Mozambique Tenders",
@@ -39,9 +39,9 @@
   },
   {
    "name": "TendersInfo",
-   "ok": true,
-   "n": 1,
-   "err": null
+   "ok": false,
+   "n": 0,
+   "err": "TimeoutError: The read operation timed out"
   },
   {
    "name": "OnlineTenders",
@@ -160,13 +160,13 @@
   {
    "name": "Banco Mundial (API)",
    "ok": true,
-   "n": 4,
+   "n": 5,
    "err": null
   },
   {
    "name": "Pesquisas Google (47 consultas)",
    "ok": true,
-   "n": 191,
+   "n": 196,
    "err": null
   }
  ]
