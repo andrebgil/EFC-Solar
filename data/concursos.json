@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T17:29:35+00:00",
+ "updated": "2026-11-15T12:34:09+00:00",
  "items": [
   {
    "title": "Selection of O&M operator for 1 year for Solar Park, plus an additional 2 years under Additional Financing",
@@ -21,6 +21,15 @@
   },
   {
    "title": "VER DETALHES",
+   "url": "https://www.ufsa.gov.mz/concurso_detalhes.php?referencia=20/04I130241/SDSMAS-V",
+   "source": "UFSA",
+   "date": null,
+   "rel": 0,
+   "first_seen": "2026-11-15T12:34:09+00:00",
+   "last_seen": "2026-11-15T12:34:09+00:00"
+  },
+  {
+   "title": "VER DETALHES",
    "url": "https://www.ufsa.gov.mz/concurso_detalhes.php?referencia=18/04I130241/SDSMAS-V",
    "source": "UFSA",
    "date": null,
@@ -29,20 +38,20 @@
    "last_seen": "2026-11-14T17:29:35+00:00"
   },
   {
-   "title": "Supply and installation of solar system to selected School in Niger State",
-   "url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481369",
-   "source": "Banco Mundial (API)",
-   "date": "13-Nov-202",
-   "rel": 1,
-   "first_seen": "2026-11-14T11:31:42+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
-  },
-  {
    "title": "Festival Orgulho Nerd SP terá shows, games e concurso de cosplay com entrada gratuita",
    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBaOW16OUp0QTd5NFF0ODNuNjFNU29paUpYY2VDYnRXcUVUWkVhZmp1ZDhWUGF4WEZfcUZfZjdMMGFUSEFSUzVzNmIwQkwtTWMtamQtY203WjJNSmZRUGlWWXNrNnFkVmY2ZGUxYmdCdEhZbHJvZ3BmZ0hvT2oyZw?oc=5",
    "source": "agenciasp.sp.gov.br",
    "date": "2026-11-13",
    "rel": 0,
+   "first_seen": "2026-11-14T11:31:42+00:00",
+   "last_seen": "2026-11-15T12:34:09+00:00"
+  },
+  {
+   "title": "Supply and installation of solar system to selected School in Niger State",
+   "url": "https://projects.worldbank.org/en/projects-operations/procurement-detail/OP00481369",
+   "source": "Banco Mundial (API)",
+   "date": "13-Nov-202",
+   "rel": 1,
    "first_seen": "2026-11-14T11:31:42+00:00",
    "last_seen": "2026-11-14T17:29:35+00:00"
   },
@@ -101,28 +110,28 @@
    "last_seen": "2026-11-13T11:50:23+00:00"
   },
   {
-   "title": "Concurso TJ GO: tribunal prevê contratação da banca em 2027",
-   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9IS2VlaUJTWkp0MG0ydlFodkFlQXgxR1BTSGhhcVpZam5hcUhMSWNsVHNQc19CS0g5Ymp6SERaTnFNMVRmd3U5M2tGeU8ybDFPZ3dHb0pMclhTa1lHc091eVNpVWtzbklOcmFBTkQtd05wbkkxNTk2Zk13TW1hcDQ?oc=5",
-   "source": "Qconcursos Folha Dirigida",
-   "date": "2026-09-17",
-   "rel": 0,
-   "first_seen": "2026-11-13T05:54:34+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
-  },
-  {
    "title": "Concursos Saúde 2026: vagas previstas e remunerações atrativas!",
    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE01Q0JJZ2d1Wkl6NlNvNUVHbEdhZFNFWkhSWFJfNlhDdFBUUjhQcWRiS1lZaE1HRW1hTVdXRWdMWUVkWEhHTzVYUU51S3NHWUJVcTFicWVldVZMMUZfWjJNcmVXdw?oc=5",
    "source": "Blog Gran Cursos Online",
    "date": "2026-11-10",
    "rel": 0,
    "first_seen": "2026-11-13T05:54:34+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concurso Polícia Penal PE: saiba como fazer a sua inscrição",
    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNYUZjZldITTJ0LUdxU0hnbGZ0Nk5iMXAwal8xaU44MURPUkhTSEh4cVBabDRkWGpqZWxJTVR0SHpJbWRMalM2MjBRd1hiNGhPTWpaZGpjR2FlVV9aRXo2S2k4Sm9OWEphdkQzX3BUekt2U1ZuSENubkZiT0tIa0NTellSclEyb3NzdjFNeUIzcmJoX1ZqUFZfUnBkZ3o?oc=5",
    "source": "Nova Concursos",
    "date": "2026-11-12",
+   "rel": 0,
+   "first_seen": "2026-11-13T05:54:34+00:00",
+   "last_seen": "2026-11-15T12:34:09+00:00"
+  },
+  {
+   "title": "Concurso TJ GO: tribunal prevê contratação da banca em 2027",
+   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9IS2VlaUJTWkp0MG0ydlFodkFlQXgxR1BTSGhhcVpZam5hcUhMSWNsVHNQc19CS0g5Ymp6SERaTnFNMVRmd3U5M2tGeU8ybDFPZ3dHb0pMclhTa1lHc091eVNpVWtzbklOcmFBTkQtd05wbkkxNTk2Zk13TW1hcDQ?oc=5",
+   "source": "Qconcursos Folha Dirigida",
+   "date": "2026-09-17",
    "rel": 0,
    "first_seen": "2026-11-13T05:54:34+00:00",
    "last_seen": "2026-11-14T17:29:35+00:00"
@@ -152,7 +161,7 @@
    "date": "2026-11-09",
    "rel": 0,
    "first_seen": "2026-11-12T11:52:46+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concurso BH: veja editais previstos na capital para 2026!",
@@ -260,7 +269,7 @@
    "date": "2026-11-11",
    "rel": 0,
    "first_seen": "2026-11-11T17:50:53+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "VER DETALHES",
@@ -377,7 +386,7 @@
    "date": "2026-10-27",
    "rel": 0,
    "first_seen": "2026-11-10T05:48:32+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "VER DETALHES",
@@ -395,7 +404,7 @@
    "date": "2026-10-15",
    "rel": 0,
    "first_seen": "2026-11-09T17:52:31+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "VER DETALHES",
@@ -422,7 +431,7 @@
    "date": "2026-11-06",
    "rel": 0,
    "first_seen": "2026-11-09T05:57:37+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "O jovem de Ha Tinh ganha o primeiro prêmio no concurso \"Vietnamese Music Arena\".",
@@ -431,7 +440,7 @@
    "date": "2026-11-09",
    "rel": 0,
    "first_seen": "2026-11-08T11:31:24+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concurso Dataprev 2026: confira as próximas fases e datas!",
@@ -440,7 +449,7 @@
    "date": "2026-11-05",
    "rel": 0,
    "first_seen": "2026-11-08T11:31:24+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "DIRECT PROCUREMENT OF FIRM TO EXECUTE CONTRACT NO.2 FOR CONSULTING SERVICES OF AN INDEPENDENT VERIFICATION AGENT (IVA) FOR THE RESULTS BASED FINANCING (RBF) SCHEMES FOR OFF-GRID SOLAR (OGS), PRODUCTIVE USES OF ENERGY (PUE), AND CLEAN COOKING SOLUTIONS (CC",
@@ -629,7 +638,7 @@
    "date": "2026-11-05",
    "rel": 0,
    "first_seen": "2026-11-05T17:51:50+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Contracting for the Supply of the Lithium Battery System",
@@ -701,7 +710,7 @@
    "date": "2026-11-02",
    "rel": 0,
    "first_seen": "2026-11-04T17:47:07+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concurso de sósias de Pitbull procura o Mr. Worldwide português em Lisboa",
@@ -710,7 +719,7 @@
    "date": "2026-10-30",
    "rel": 0,
    "first_seen": "2026-11-04T17:47:07+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "'Arena Info by Samsung Odyssey' oferece campeonato gamer, concurso cosplay e karaokê gratuitos em Manaus",
@@ -719,7 +728,7 @@
    "date": "2026-10-21",
    "rel": 0,
    "first_seen": "2026-11-04T17:47:07+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Confira os vencedores dos concursos de K-Pop do Pichau Arena 2026",
@@ -728,7 +737,7 @@
    "date": "2026-10-13",
    "rel": 0,
    "first_seen": "2026-11-04T17:47:07+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Arena Info by Samsung Odyssey terá torneios de games, oficinas e concursos de cosplay",
@@ -737,7 +746,7 @@
    "date": "2026-10-13",
    "rel": 0,
    "first_seen": "2026-11-04T17:47:07+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Pernambuco publica editais de concursos para Polícia Militar e Corpo de Bombeiros",
@@ -746,7 +755,7 @@
    "date": "2026-09-30",
    "rel": 0,
    "first_seen": "2026-11-04T17:47:07+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Turkey awards 785 MW of solar capacity in YEKA tender",
@@ -755,7 +764,7 @@
    "date": "2026-11-03",
    "rel": 1,
    "first_seen": "2026-11-04T17:47:07+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Prazo para inscrições ao concurso do São Sebastião Prev terminam às 17h desta quinta-feira",
@@ -971,7 +980,7 @@
    "date": "2026-11-03",
    "rel": 0,
    "first_seen": "2026-11-03T17:44:27+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Turkey awards 785 MW in YEKA solar tender",
@@ -980,7 +989,7 @@
    "date": "2026-11-03",
    "rel": 1,
    "first_seen": "2026-11-03T17:44:27+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Germany awards 288 MW in rooftop solar tender as interest rebounds",
@@ -989,7 +998,7 @@
    "date": "2026-11-03",
    "rel": 1,
    "first_seen": "2026-11-03T17:44:27+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "VER DETALHES",
@@ -1214,7 +1223,7 @@
    "date": "2026-10-12",
    "rel": 0,
    "first_seen": "2026-10-31T05:33:50+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Mozambique: Eni launches EPC tender for 75 MW gas-fired power plant in Temane",
@@ -1223,7 +1232,7 @@
    "date": "2026-10-21",
    "rel": 0,
    "first_seen": "2026-10-31T05:33:50+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "VER DETALHES",
@@ -1241,7 +1250,7 @@
    "date": "2026-10-21",
    "rel": 0,
    "first_seen": "2026-10-30T17:36:56+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "TJ-PB tem concurso com 50 vagas e salário de R$ 7,5 mil",
@@ -1250,7 +1259,7 @@
    "date": "2026-10-30",
    "rel": 0,
    "first_seen": "2026-10-30T17:36:56+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Ciro quer concursos e transição para reduzir número de professores temporários no Ceará",
@@ -1259,7 +1268,7 @@
    "date": "2026-09-17",
    "rel": 0,
    "first_seen": "2026-10-30T17:36:56+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concursos públicos e funcionalismo: o que Lula e Flávio Bolsonaro propõem em seus planos de governo",
@@ -1421,7 +1430,7 @@
    "date": "2026-10-27",
    "rel": 0,
    "first_seen": "2026-10-29T17:41:53+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concursos Maranhão 2026: ATUALIZADO! Vagas e editais previstos",
@@ -1520,7 +1529,7 @@
    "date": "2026-10-27",
    "rel": 0,
    "first_seen": "2026-10-29T11:36:44+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Convocação de novos aprovados no concurso da Polícia Penal do Ceará é autorizada pela Alece",
@@ -1664,7 +1673,7 @@
    "date": "2026-10-04",
    "rel": 0,
    "first_seen": "2026-10-28T17:40:36+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concursos Nível Médio 2026: editais previstos e oportunidades!",
@@ -1673,7 +1682,7 @@
    "date": "2026-11-09",
    "rel": 0,
    "first_seen": "2026-10-28T17:40:36+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Eleições 2026: quem não votou é proibido de fazer concurso?",
@@ -1835,7 +1844,7 @@
    "date": null,
    "rel": 0,
    "first_seen": "2026-10-28T05:36:27+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Bar de Porto Alegre terá concurso de fantasias e quiz de filmes de terror no Halloween",
@@ -1844,7 +1853,7 @@
    "date": "2026-10-27",
    "rel": 0,
    "first_seen": "2026-10-28T05:36:27+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concursos e seleções: veja inscrições abertas no Ceará nesta segunda-feira (26)",
@@ -1853,7 +1862,7 @@
    "date": "2026-10-26",
    "rel": 0,
    "first_seen": "2026-10-28T05:36:27+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "PNUD ABRE LICITAÇÃO PARA CONSULTORIA EM TRANSFORMAÇÃO DIGITAL",
@@ -1862,7 +1871,7 @@
    "date": "2026-09-23",
    "rel": 0,
    "first_seen": "2026-10-28T05:36:27+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "BOCA DE JAMBU oficial: Porto de Moz. A Prefeitura. O Concurso Público. As Irregularidades. O MP e a Recomendação de Suspensão",
@@ -2006,7 +2015,7 @@
    "date": null,
    "rel": 0,
    "first_seen": "2026-10-27T17:44:42+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Moçambique: Governo suspende aquisição de carros de luxo para o Conselho Constitucional",
@@ -2015,7 +2024,7 @@
    "date": "2026-10-02",
    "rel": 0,
    "first_seen": "2026-10-27T17:44:42+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concurso TRT GO terá reserva de 30% das vagas para cotas raciais",
@@ -2087,7 +2096,7 @@
    "date": "2026-10-22",
    "rel": 0,
    "first_seen": "2026-10-27T11:31:09+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concurso PM AL: 1.060 vagas! Provas em janeiro",
@@ -2570,10 +2579,10 @@
    "title": "Concursos de Polícia 2026: Atualizado! Veja as oportunidades",
    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBIblhnVDhKNzRXdk9UY0NIYlNldDh0Y2FvSlpCTTVRYTlxRUc5Q0JDSnFNNDVSQ3hpcmtfckpCYjFGVnZJNVJqWVlaeEhZNmNfcV96c0lSekNVY25sTE1IbnBfd283X2dOMHY4TUZB0gFzQVVfeXFMUEs5YzloQThuQ2drWHJSczJvZWM4QXBnRWVpTkJTNE95bkZTZ0V0cEEycl81TjY0Y181Vm9TTkVkU2JSZ3RZUzBoWEVkel9nU0FlM29MZnVOQ2ZfZDJocEFDM2VqVzR2cThrS0Voa2dWa2tYRQ?oc=5",
    "source": "Estratégia Concursos",
-   "date": "2026-11-11",
+   "date": "2026-11-14",
    "rel": 0,
    "first_seen": "2026-10-26T00:00:00+00:00",
-   "last_seen": "2026-11-14T11:31:42+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Justifiquei meu voto, posso fazer concurso ou tomar posse? Veja!",
@@ -2609,7 +2618,7 @@
    "date": "2026-10-23",
    "rel": 0,
    "first_seen": "2026-10-23T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concurso Receita Federal: banca este mês, edital em dezembro!",
@@ -2618,7 +2627,7 @@
    "date": "2026-11-09",
    "rel": 0,
    "first_seen": "2026-10-23T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Germany kicks off 2.2-GW ground-mounted solar tender",
@@ -2636,7 +2645,7 @@
    "date": "2026-11-11",
    "rel": 0,
    "first_seen": "2026-10-22T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concurso TJ SP: inscrições abertas; inicial de R$ 9 mil!",
@@ -2645,7 +2654,7 @@
    "date": "2026-10-28",
    "rel": 0,
    "first_seen": "2026-10-22T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Mozambique: C&I offtaker starts early procurement for major gas plant",
@@ -2654,7 +2663,7 @@
    "date": "2026-10-22",
    "rel": 0,
    "first_seen": "2026-10-22T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Eni launches EPC tender for 75 MW gas power plant in Mozambique",
@@ -2663,7 +2672,7 @@
    "date": "2026-10-22",
    "rel": 0,
    "first_seen": "2026-10-22T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "⚡ Power & Renewable Energy 18,500+ tenders",
@@ -2672,7 +2681,7 @@
    "date": null,
    "rel": 1,
    "first_seen": "2026-10-20T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Renewable Energy Tenders",
@@ -2681,7 +2690,7 @@
    "date": null,
    "rel": 1,
    "first_seen": "2026-10-20T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "CONVITE PARA PRÉ-QUALIFICAÇÃO – Seleção de Produtor Independente de Energia para uma Central de Energia Solar Fotovoltaica de 30MWac",
@@ -2690,7 +2699,7 @@
    "date": null,
    "rel": 1,
    "first_seen": "2026-10-20T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "INVITATION FOR PREQUALIFICATION-Selection of Independent Power Producer for one 30MWac Solar Photovoltaic Power Plant",
@@ -2699,7 +2708,7 @@
    "date": null,
    "rel": 1,
    "first_seen": "2026-10-20T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Departamento de Aquisições",
@@ -2708,7 +2717,7 @@
    "date": null,
    "rel": 0,
    "first_seen": "2026-10-20T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Formulário de Solicitação de Item (Descarregar)",
@@ -2717,7 +2726,7 @@
    "date": null,
    "rel": 0,
    "first_seen": "2026-10-20T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concursos Abertos",
@@ -2726,7 +2735,7 @@
    "date": null,
    "rel": 0,
    "first_seen": "2026-10-20T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concursos Adjudicados",
@@ -2735,7 +2744,7 @@
    "date": null,
    "rel": 0,
    "first_seen": "2026-10-20T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concursos Cancelados",
@@ -2744,7 +2753,7 @@
    "date": null,
    "rel": 0,
    "first_seen": "2026-10-20T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concursos Invalidados",
@@ -2753,7 +2762,7 @@
    "date": null,
    "rel": 0,
    "first_seen": "2026-10-20T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concursos de Fornecimento de B..",
@@ -2762,7 +2771,7 @@
    "date": null,
    "rel": 0,
    "first_seen": "2026-10-20T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concursos de Admissão de Pess..",
@@ -2771,7 +2780,7 @@
    "date": null,
    "rel": 0,
    "first_seen": "2026-10-20T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "CONCURSO PÚBLICO N° 187/W/MOZNORTE/RFB/2025- Construção de Infraestruturas da REN, BL4 e Chipange Chetu na Província de Niassa (Mecula e Sanga)",
@@ -2780,7 +2789,7 @@
    "date": null,
    "rel": 0,
    "first_seen": "2026-10-20T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concurso Público n°: 261/NCS/PERS/RFB/2025: Contratação do serviço de conceptualização e produção de materiais de comunicação audiovisuais e implementação de campanhas de comunicação do Programa MozRural",
@@ -2789,7 +2798,7 @@
    "date": null,
    "rel": 0,
    "first_seen": "2026-10-20T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concurso Público n°: 260/NCS/PERS/RFB/2025: Prestação de Serviços de Gráfica e Serigrafia no Contexto da Implementação da Estratégia de Comunicação do Programa MozRural",
@@ -2798,7 +2807,7 @@
    "date": null,
    "rel": 0,
    "first_seen": "2026-10-20T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Zhongmei vence dois concursos milionários da ANE e tem Danúbio Lado como sócio maioritário",
@@ -2807,7 +2816,7 @@
    "date": "2026-10-20",
    "rel": 0,
    "first_seen": "2026-10-20T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "First Capital Bank Premeia Artistas Nacionais em Concurso de Arte Contemporânea",
@@ -2816,7 +2825,7 @@
    "date": "2026-10-20",
    "rel": 0,
    "first_seen": "2026-10-20T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concursos MT 2026: editais abertos e previstos em Mato Grosso!",
@@ -2825,7 +2834,7 @@
    "date": "2026-11-10",
    "rel": 0,
    "first_seen": "2026-10-20T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concursos Rio de Janeiro: iniciais de até R$ 26,9 mil!",
@@ -2834,7 +2843,7 @@
    "date": "2026-10-20",
    "rel": 0,
    "first_seen": "2026-10-20T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concursos Piauí 2026: mais de 1.200 vagas; veja oportunidades!",
@@ -2843,7 +2852,7 @@
    "date": "2026-10-20",
    "rel": 0,
    "first_seen": "2026-10-20T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concursos MS 2026 abertos e previstos em Mato Grosso do Sul",
@@ -2852,7 +2861,7 @@
    "date": "2026-11-05",
    "rel": 0,
    "first_seen": "2026-10-20T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Governo regulamenta aposentação obrigatória e reforça controlo das aquisições públicas",
@@ -2888,7 +2897,7 @@
    "date": "2026-10-19",
    "rel": 0,
    "first_seen": "2026-10-19T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concursos Ceará 2026: panorama dos editais. Atualizado!",
@@ -2897,7 +2906,7 @@
    "date": "2026-10-19",
    "rel": 0,
    "first_seen": "2026-10-19T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Mozambique opens tender for 600 rural mobile sites",
@@ -2924,7 +2933,7 @@
    "date": "2026-11-09",
    "rel": 0,
    "first_seen": "2026-10-16T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Moçambique adjudica obras em 485 km de estradas de duas províncias por 292,8 ME",
@@ -2960,7 +2969,7 @@
    "date": "2026-10-15",
    "rel": 0,
    "first_seen": "2026-10-15T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concurso Miss Drag Santos e espetáculo em Cubatão são destaques culturais na região",
@@ -2978,7 +2987,7 @@
    "date": "2026-10-14",
    "rel": 0,
    "first_seen": "2026-10-14T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Governo esclarece que concurso de Machipanda não foi cancelado",
@@ -2987,7 +2996,7 @@
    "date": "2026-10-14",
    "rel": 0,
    "first_seen": "2026-10-14T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concursos Enfermagem: fique por dentro das vagas para 2026!",
@@ -2996,7 +3005,7 @@
    "date": "2026-11-03",
    "rel": 0,
    "first_seen": "2026-10-14T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Governo esclarece que o concurso público de Machipanda não foi cancelado",
@@ -3014,7 +3023,7 @@
    "date": "2026-10-13",
    "rel": 0,
    "first_seen": "2026-10-13T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Os contornos de um concurso público",
@@ -3023,7 +3032,7 @@
    "date": "2026-10-13",
    "rel": 0,
    "first_seen": "2026-10-13T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Gridworks launches tender process for 460km Mozambique power transmission project",
@@ -3032,7 +3041,7 @@
    "date": "2026-10-12",
    "rel": 0,
    "first_seen": "2026-10-12T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Estudantes Moçambicanos Levam Robô de Combate a Incêndios a Concurso na Coreia do Sul",
@@ -3041,7 +3050,7 @@
    "date": "2026-10-08",
    "rel": 0,
    "first_seen": "2026-10-08T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Quer fazer concurso da Prefeitura de Curitiba? Inscrições estão abertas",
@@ -3050,7 +3059,7 @@
    "date": "2026-10-08",
    "rel": 0,
    "first_seen": "2026-10-08T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concurso SEFAZ CE: resultado definitivo e convocações!",
@@ -3059,7 +3068,7 @@
    "date": "2026-10-08",
    "rel": 0,
    "first_seen": "2026-10-08T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concursos Juiz 2026: veja editais previstos! Até R$ 37 mil",
@@ -3077,7 +3086,7 @@
    "date": "2026-10-07",
    "rel": 0,
    "first_seen": "2026-10-07T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concurso Polícia Científica SP: edital terá 397 vagas; confira!",
@@ -3095,7 +3104,7 @@
    "date": "2026-10-06",
    "rel": 0,
    "first_seen": "2026-10-06T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concurso Delegado AP: conheça as oito fases do certame",
@@ -3113,7 +3122,7 @@
    "date": "2026-10-05",
    "rel": 0,
    "first_seen": "2026-10-05T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concurso da Prefeitura de Santos terá provas para mais de 47 mil candidatos neste domingo",
@@ -3122,7 +3131,7 @@
    "date": "2026-10-05",
    "rel": 0,
    "first_seen": "2026-10-05T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Viaturas de luxo do Conselho Constitucional já circulavam antes da adjudicação",
@@ -3131,7 +3140,7 @@
    "date": "2026-10-05",
    "rel": 0,
    "first_seen": "2026-10-05T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "A poucos dias do início das inscrições, tire dúvidas sobre o concurso da Prefeitura de Curitiba",
@@ -3140,7 +3149,7 @@
    "date": "2026-10-04",
    "rel": 0,
    "first_seen": "2026-10-04T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "ONU abre inscrições para concurso de cartazes para o Dia Mundial da Alimentação 2026",
@@ -3149,7 +3158,7 @@
    "date": "2026-10-02",
    "rel": 0,
    "first_seen": "2026-10-02T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Aprovada no Concurso FUNAI: conheça Mariana R.",
@@ -3158,7 +3167,7 @@
    "date": "2026-10-01",
    "rel": 0,
    "first_seen": "2026-10-01T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Ministério das Finanças suspende polémico processo de aquisição de viaturas no Conselho Constitucional",
@@ -3167,7 +3176,7 @@
    "date": "2026-10-01",
    "rel": 0,
    "first_seen": "2026-10-01T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "“A Lei que regula as aquisições do Estado nega compra duma coisa em concreto”, afirma Dinis Tivane sobre Mercedes-Benz do CC",
@@ -3176,7 +3185,7 @@
    "date": "2026-10-01",
    "rel": 0,
    "first_seen": "2026-10-01T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concursos Polícia Civil 2026: confira as atualizações!",
@@ -3185,7 +3194,7 @@
    "date": "2026-10-30",
    "rel": 0,
    "first_seen": "2026-09-29T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Saiba mais detalhes do concurso público unificado da Prefeitura de Curitiba",
@@ -3221,7 +3230,7 @@
    "date": "2026-09-23",
    "rel": 0,
    "first_seen": "2026-09-23T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concurso Sefaz BA 2026: Cesgranrio é a banca! Edital iminente",
@@ -3230,7 +3239,7 @@
    "date": "2026-09-23",
    "rel": 0,
    "first_seen": "2026-09-23T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Eduardo Pimentel anuncia concurso público com 348 vagas em 10 cargos",
@@ -3239,7 +3248,7 @@
    "date": "2026-09-22",
    "rel": 0,
    "first_seen": "2026-09-22T00:00:00+00:00",
-   "last_seen": "2026-11-10T17:42:31+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Defence Estates Office Floats Tenders For 96 MW Solar Projects In Jhansi And Babina Of Uttar Pradesh",
@@ -3266,7 +3275,7 @@
    "date": "2026-09-20",
    "rel": 0,
    "first_seen": "2026-09-20T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Galeria de Concurso 'Pré-escola em Moçambique: Flor da Manhã' - 1",
@@ -3275,7 +3284,7 @@
    "date": "2026-09-18",
    "rel": 0,
    "first_seen": "2026-09-18T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concursos Rio Grande do Sul 2026: editais abertos e previstos!",
@@ -3284,7 +3293,7 @@
    "date": "2026-11-05",
    "rel": 0,
    "first_seen": "2026-09-18T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concursos Santa Catarina 2026: editais previstos e abertos",
@@ -3293,7 +3302,7 @@
    "date": "2026-11-04",
    "rel": 0,
    "first_seen": "2026-09-18T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concurso SES TO 2026: 5.124 vagas; até R$ 17,7 mil!",
@@ -3302,7 +3311,7 @@
    "date": "2026-11-04",
    "rel": 0,
    "first_seen": "2026-09-18T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Fundação Nacional dos Povos Indígenas retifica concurso e altera período de inscrições para especialistas temporários",
@@ -3311,7 +3320,7 @@
    "date": "2026-09-17",
    "rel": 0,
    "first_seen": "2026-09-17T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concursos Rio Grande do Norte 2026: editais previstos!",
@@ -3320,7 +3329,7 @@
    "date": "2026-09-17",
    "rel": 0,
    "first_seen": "2026-09-17T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concursos bancários em 2026: confira as oportunidades da área!",
@@ -3329,7 +3338,7 @@
    "date": "2026-11-04",
    "rel": 0,
    "first_seen": "2026-09-16T00:00:00+00:00",
-   "last_seen": "2026-11-14T17:29:35+00:00"
+   "last_seen": "2026-11-15T12:34:09+00:00"
   },
   {
    "title": "Concurso para professor efetivo no Ceará 2026: SEDUC abre 2.000 vagas",
