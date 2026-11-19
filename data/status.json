@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T14:12:16+00:00",
+ "updated": "2026-11-19T23:26:58+00:00",
  "sources": [
   {
    "name": "Concursos.co.mz",
@@ -22,7 +22,7 @@
   {
    "name": "Mozambique Tenders",
    "ok": true,
-   "n": 1,
+   "n": 0,
    "err": null
   },
   {
@@ -93,9 +93,9 @@
   },
   {
    "name": "Vulcan International",
-   "ok": false,
+   "ok": true,
    "n": 0,
-   "err": "URLError: <urlopen error [Errno -3] Temporary failure in name resolution>"
+   "err": null
   },
   {
    "name": "Kenmare Resources",
@@ -166,7 +166,7 @@
   {
    "name": "Pesquisas Google (47 consultas)",
    "ok": true,
-   "n": 216,
+   "n": 225,
    "err": null
   }
  ]
