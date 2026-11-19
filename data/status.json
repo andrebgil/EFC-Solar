@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T23:19:09+00:00",
+ "updated": "2026-11-19T14:12:16+00:00",
  "sources": [
   {
    "name": "Concursos.co.mz",
@@ -22,7 +22,7 @@
   {
    "name": "Mozambique Tenders",
    "ok": true,
-   "n": 0,
+   "n": 1,
    "err": null
   },
   {
@@ -93,9 +93,9 @@
   },
   {
    "name": "Vulcan International",
-   "ok": true,
+   "ok": false,
    "n": 0,
-   "err": null
+   "err": "URLError: <urlopen error [Errno -3] Temporary failure in name resolution>"
   },
   {
    "name": "Kenmare Resources",
@@ -160,13 +160,13 @@
   {
    "name": "Banco Mundial (API)",
    "ok": true,
-   "n": 2,
+   "n": 1,
    "err": null
   },
   {
    "name": "Pesquisas Google (47 consultas)",
    "ok": true,
-   "n": 223,
+   "n": 216,
    "err": null
   }
  ]
