@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T22:20:41+00:00",
+ "updated": "2026-11-23T15:46:09+00:00",
  "sources": [
   {
    "name": "Concursos.co.mz",
@@ -52,7 +52,7 @@
   {
    "name": "BidDetail",
    "ok": true,
-   "n": 1,
+   "n": 2,
    "err": null
   },
   {
@@ -160,13 +160,13 @@
   {
    "name": "Banco Mundial (API)",
    "ok": true,
-   "n": 2,
+   "n": 5,
    "err": null
   },
   {
    "name": "Pesquisas Google (47 consultas)",
    "ok": true,
-   "n": 217,
+   "n": 219,
    "err": null
   }
  ]
