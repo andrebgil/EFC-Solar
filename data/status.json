@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-28T00:23:44+00:00",
+ "updated": "2026-11-28T13:57:57+00:00",
  "sources": [
   {
    "name": "Concursos.co.mz",
@@ -15,9 +15,9 @@
   },
   {
    "name": "ts.gov.mz",
-   "ok": true,
+   "ok": false,
    "n": 0,
-   "err": null
+   "err": "URLError: <urlopen error [Errno -3] Temporary failure in name resolution>"
   },
   {
    "name": "Mozambique Tenders",
@@ -160,13 +160,13 @@
   {
    "name": "Banco Mundial (API)",
    "ok": true,
-   "n": 0,
+   "n": 4,
    "err": null
   },
   {
    "name": "Pesquisas Google (47 consultas)",
    "ok": true,
-   "n": 240,
+   "n": 264,
    "err": null
   }
  ]
